@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ultimate AI Music & Audio Studio</title>
+<style>
+/* ==== Basic Dark Theme ==== */
+body {margin:0;font-family:'Segoe UI',sans-serif;background:#121212;color:#f0f0f0;overflow-x:hidden;}
+header{display:flex;justify-content:space-between;align-items:center;padding:20px;background:#1f1f1f;}
+header .logo{font-size:1.8rem;font-weight:bold;background:linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);-webkit-background-clip:text;color:transparent;animation:rainbowText 5s linear infinite;}
+@keyframes rainbowText{0%{background-position:0%}100%{background-position:100%}}
+nav a{color:#f0f0f0;text-decoration:none;margin-left:20px;transition:0.3s;}
+nav a:hover{color:#ffcc00;}
+header a.btn{background:#ffcc00;color:#121212;padding:10px 20px;border-radius:6px;font-weight:bold;text-decoration:none;}
+.hero{text-align:center;padding:80px 20px;background:linear-gradient(135deg,#0f0f0f,#1a1a1a);}
+.hero h1{font-size:3rem;margin-bottom:20px;white-space:nowrap;overflow:hidden;display:inline-block;position:relative;animation:moveText 10s linear infinite;}
+@keyframes moveText{0%{left:100%;}50%{left:-100%;}100%{left:100%;}}
+.hero p{font-size:1.2rem;margin-bottom:40px;}
+.hero .cta-buttons a{background:#ffcc00;color:#121212;padding:10px 20px;border-radius:6px;margin:0 10px;text-decoration:none;font-weight:bold;transition:0.3s;}
+.hero .cta-buttons a:hover{background:#ffa500;}
+h2{font-size:2rem;text-align:center;margin-bottom:40px;background:linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);-webkit-background-clip:text;color:transparent;animation:rainbowText 5s linear infinite;}
+.section{padding:50px 20px;}
+.feature-cards,.pricing-cards{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;}
+.card{background:#1f1f1f;padding:30px;border-radius:10px;width:220px;text-align:center;transition:0.3s;}
+.card:hover{background:#ffcc00;color:#121212;transform:translateY(-5px);}
+.pricing-cards .best{border:2px solid #ffcc00;animation:rainbowBorder 5s linear infinite;}
+@keyframes rainbowBorder{0%{border-color:red;}14%{border-color:orange;}28%{border-color:yellow;}42%{border-color:green;}57%{border-color:blue;}71%{border-color:indigo;}85%{border-color:violet;}100%{border-color:red;}}
+button{background:#ffcc00;color:#121212;border:none;padding:10px 20px;border-radius:6px;font-weight:bold;cursor:pointer;transition:0.3s;}
+button:hover{background:#ffa500;}
+footer{text-align:center;padding:20px;background:#1f1f1f;}
+#dashboard .card input,#dashboard .card select{margin-top:10px;padding:5px;width:90%;border-radius:4px;border:none;}
+audio{margin-top:10px;width:100%;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">🎵 AI Music Studio</div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#features">Features</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#dashboard">Dashboard</a>
+    <a href="#" class="btn">Start Free Trial</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <h1>🎶 Ultimate AI Music & Audio Studio 🎶</h1>
+  <p>Your all-in-one platform for music creation, audio editing, smart AI tools, and collaboration.</p>
+  <div class="cta-buttons">
+    <a href="#pricing" class="btn">Subscribe Premium</a>
+    <a href="#dashboard" class="btn">Start Free Trial</a>
+  </div>
+</section>
+
+<section class="section" id="features">
+  <h2>Features</h2>
+  <div class="feature-cards">
+    <div class="card"><strong>✂️ Core Editing</strong><br>Cut, Copy, Paste, Trim, Split, Merge, Delete, Undo/Redo<br>Zoom In/Out, Snap to Grid, Time Stretch, Pitch Shift<br>Normalize, Fade In/Out, Silence, Reverse, Loop<br>Multi-track editing, Drag-and-drop clips<br>Clip Solo/Mute, Color Tagging, Renaming</div>
+    <div class="card"><strong>🎧 Effects & Processing</strong><br>Reverb, Delay, Echo, Chorus, Flanger, Phaser<br>Distortion, Overdrive, Bitcrusher<br>Compressor, Limiter, EQ, Noise Gate, Auto-Tune</div>
+    <div class="card"><strong>🧠 AI & Smart Tools</strong><br>AI Noise Reduction, Vocal Isolation, Mastering<br>Beat Detection, Tempo & Key Matching<br>Melody/Harmony/Chord Progression & Lyric Generation</div>
+    <div class="card"><strong>🎵 Music Creation</strong><br>MIDI Editor, Piano Roll, Drum Machine, Synthesizer<br>Arpeggiator, Chord Builder, Groove Quantizer</div>
+  </div>
+  <div class="feature-cards" style="margin-top:30px;">
+    <div class="card"><strong>🌐 Collaboration & Sharing</strong><br>Real-time Collaboration, Project Sharing, Version History<br>Team Roles, Chat, Voice, Video, Feedback, Cloud Storage</div>
+    <div class="card"><strong>📁 File & Format Support</strong><br>MP3, WAV, FLAC, OGG, AAC, M4A, AIFF, ALAC, WMA<br>MIDI & STEMS, Project Files, JSON, XML, TXT, PDF, CSV</div>
+    <div class="card"><strong>🖥️ Interface & UX</strong><br>Dark/Light Mode, Custom Themes, Resizable Panels<br>Mobile-Friendly, Touch Support, Keyboard Shortcuts<br>User Dashboard, Profile, Community, Library</div>
+  </div>
+</section>
+
+<section class="section" id="pricing">
+  <h2>Pricing</h2>
+  <div class="pricing-cards">
+    <div class="card">
+      <h3>Weekly</h3>
+      <p>$1.99/week</p>
+      <p>Full AI access for 7 days</p>
+      <button onclick="subscribe('weekly')">Subscribe</button>
+    </div>
+    <div class="card best">
+      <h3>Monthly</h3>
+      <p>$50/month</p>
+      <p>Full AI + Effects + Collaboration</p>
+      <button onclick="subscribe('monthly')">Subscribe</button>
+    </div>
+    <div class="card">
+      <h3>Yearly</h3>
+      <p>$100/year</p>
+      <p>All features + priority support</p>
+      <button onclick="subscribe('yearly')">Subscribe</button>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="dashboard">
+  <h2>AI Dashboard</h2>
+  <div class="feature-cards">
+    <div class="card"><strong>Upload Audio</strong><br><input type="file" id="audioFile" accept="audio/*"></div>
+    <div class="card"><strong>AI Effect</strong><br>
+      <select id="aiEffect">
+        <option value="none">Select Effect</option>
+        <option value="reverb">Reverb</option>
+        <option value="pitch">Pitch Shift</option>
+        <option value="reverse">Reverse</option>
+        <option value="speed">Speed Up</option>
+      </select>
+    </div>
+    <div class="card"><strong>Preview & Play</strong><br>
+      <button onclick="processAudio()">Apply & Play</button><br>
+      <audio id="audioPlayer" controls></audio>
+    </div>
+    <div class="card"><strong>Download</strong><br>
+      <button id="downloadBtn">Download Processed</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 AI Music Studio. All rights reserved.</p>
+</footer>
+
+<!-- Stripe JS -->
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+const stripe = Stripe('YOUR_STRIPE_PUBLISHABLE_KEY'); // replace with your Stripe test/live key
+
+function subscribe(plan) {
+  let priceId;
+  if(plan==='weekly') priceId='PRICE_ID_WEEKLY';
+  if(plan==='monthly') priceId='PRICE_ID_MONTHLY';
+  if(plan==='yearly') priceId='PRICE_ID_YEARLY';
+
+  stripe.redirectToCheckout({
+    lineItems:[{price:priceId,quantity:1}],
+    mode:'subscription',
+    successUrl:window.location.href+'?success=true',
+    cancelUrl:window.location.href+'?canceled=true'
+  });
+}
+
+// AI Audio Dashboard
+let audioBuffer;
+let audioContext = new (window.AudioContext || window.webkitAudioContext)();
+let sourceNode;
+
+document.getElementById('audioFile').addEventListener('change', async function(e){
+  const file = e.target.files[0];
+  if(!file) return;
+  const arrayBuffer = await file.arrayBuffer();
+  audioBuffer = await audioContext.decodeAudioData(arrayBuffer);
+  alert('Audio loaded! Now select an AI effect and click Apply & Play.');
+});
+
+function processAudio(){
+  if(!audioBuffer) { alert('Upload audio first!'); return; }
+  const effect = document.getElementById('aiEffect').value;
+  if(sourceNode) sourceNode.disconnect();
+  sourceNode = audioContext.createBufferSource();
+  sourceNode.buffer = audioBuffer;
+  let nodeChain = sourceNode;
+  switch(effect){
+    case 'reverb': let convolver = audioContext.createConvolver(); convolver.buffer=audioBuffer; nodeChain.connect(convolver); nodeChain=convolver; break;
+    case 'pitch': sourceNode.playbackRate.value=1.5; break;
+    case 'reverse': for(let i=0;i<audioBuffer.numberOfChannels;i++){Array.prototype.reverse.call(audioBuffer.getChannelData(i));} break;
+    case 'speed': sourceNode.playbackRate.value=1.8; break;
+  }
+  nodeChain.connect(audioContext.destination);
+  sourceNode.start(0);
+  const wavBlob = bufferToWave(audioBuffer);
+  const url = URL.createObjectURL(wavBlob);
+  const player = document.getElementById('audioPlayer');
+  player.src=url;
+  document.getElementById('downloadBtn').onclick=()=>{const a=document.createElement('a');a.href=url;a.download='processed_audio.wav';a.click();};
+}
+
+function bufferToWave(abuffer){
+  let numOfChan=abuffer.numberOfChannels,length=abuffer.length*numOfChan*2+44,buffer=new ArrayBuffer(length),view=new DataView(buffer),channels=[],i,sample,offset=0,pos=0;
+  setUint32(0x46464952); setUint32(length-8); setUint32(0x45564157);
+  setUint32(0x20746d66); setUint32(16); setUint16(1); setUint16(numOfChan);
+  setUint32(abuffer.sampleRate); setUint32(abuffer.sampleRate*2*numOfChan); setUint16(numOfChan*2); setUint16(16);
+  setUint32(0x61746164); setUint32(length-pos-4);
+  for(i=0;i<abuffer.numberOfChannels;i++) channels.push(abuffer.getChannelData(i));
+  while(pos<length){for(i=0;i<numOfChan;i++){sample=Math.max(-1,Math.min(1,channels[i][offset]));view.setInt16(pos,sample<0?sample*0x8000:sample*0x7FFF,true);pos+=2;} offset++;}
+  return new Blob([buffer],{type:"audio/wav"});
+  function setUint16(data){view.setUint16(pos,data,true);pos+=2;}
+  function setUint32(data){view.setUint32(pos,data,true);pos+=4;}
+}
+</script>
+</body>
+</html>
+	
+	
